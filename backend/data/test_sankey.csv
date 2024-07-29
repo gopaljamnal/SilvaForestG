@@ -1,0 +1,10 @@
+,source,destination,depth,feature,name,color
+0,0,1,0,4,chlorides,#984ea3
+1,1,7,1,6,total sulfur dioxide,#ffff33
+2,2,3,1,1,volatile acidity,#e41a1c
+3,4,5,2,10,alcohol,#8dd3c7
+4,7,9,2,10,alcohol,#8dd3c7
+5,9,11,3,10,alcohol,#8dd3c7
+6,10,15,3,8,pH,#f781bf
+7,12,13,4,5,free sulfur dioxide,#ff7f00
+8,16,17,4,5,free sulfur dioxide,#ff7f00

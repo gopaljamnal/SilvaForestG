@@ -1,0 +1,40 @@
+/* src/index.css */
+.tabs {
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin-right: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.icicle-plots-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.icicle-plot-container {
+  flex: 1;
+  min-width: 300px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+}
+/*.icicle-plot-container {*/
+/*  flex: 1 1 calc(50% - 10px); !* Two plots per row *!*/
+/*  box-sizing: border-box;*/
+/*  padding: 10px;*/
+/*  border: 1px solid #ccc;*/
+/*}*/
