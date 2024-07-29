@@ -8,7 +8,7 @@ import pandas as pd
 app = Flask(__name__)
 CORS(app)
 
-
+# reading data from old application generated json
 @app.route('/readjson', methods=['GET'])
 def readjson():
     with open('./frontend/src/rf_json_trees.json', mode='r') as f:
