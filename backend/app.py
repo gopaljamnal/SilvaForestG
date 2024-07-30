@@ -10,15 +10,19 @@ CORS(app)
 
 # reading data from old application generated json
 @app.route('/readjson', methods=['GET'])
-def readjson():
-    with open('./frontend/src/rf_json_trees.json', mode='r') as f:
+def read_json():
+    with open('./backend/rf_json_trees.json', mode='r') as f:
         data = json.loads(f.read())
         return jsonify(data)
 
+#
+# @app.route('/')
+# def hello_world():  # put application's code here
+#     return 'Hello World!'
 
 @app.route('/energy')
 def energy_json():
-    with open('./frontend/src/energy.json', mode= 'r') as f:
+    with open('./backend/data/energy.json', mode= 'r') as f:
         data = json.loads(f.read())
         return jsonify(data)
 
@@ -29,9 +33,7 @@ def sankey_csv():
         data =  csv.reader(f.read())
 
         return jsonify(data)
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+
 
 # @app.route('/sankey_data')
 # def sankey_data():

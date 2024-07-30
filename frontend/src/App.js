@@ -28,7 +28,7 @@ const App = () => {
   const renderTabContent = () => {
     switch (activeTab) {
       case 'icicle':
-        if (data.length===0) return <p>Loading data...</p>;
+        if (data.length===0) return <p>Loading data form backend...</p>;
       console.log(data)
         return (
           <div className="icicle-plots-container">
