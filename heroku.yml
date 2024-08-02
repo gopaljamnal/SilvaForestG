@@ -1,0 +1,9 @@
+build:
+  docker:
+    backend: backend/Dockerfile
+    frontend: frontend/Dockerfile
+
+
+#run:
+#  backend: flask run --host=0.0.0.0 --port=5000
+#  frontend: serve -s build

@@ -1,6 +1,3 @@
-
-
-
 # Use an official node runtime as a parent image
 FROM node:16.20.2
 

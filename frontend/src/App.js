@@ -11,18 +11,22 @@ const App = () => {
   const [activeTab, setActiveTab] = useState('icicle');
   // const [plots, setPlots] = useState([]);
 
-  useEffect(() => {
-    axios.get('http://127.0.0.1:5000/readjson')
-      .then(response => {
-          setData(response.data[0].forestTrees);
-          // console.log(response.data[0].forestTrees)
+  // useEffect(() => {
+  //   axios.get('http://127.0.0.1:5000/readjson')
+  //     .then(response => {
+  //         setData(response.data[0].forestTrees);
+  //         // console.log(response.data[0].forestTrees)
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching data:', error);
+  //     });
+  // }, []);
 
-
-
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    useEffect(() => {
+    fetch('http://127.0.0.1:5000/readjson')
+      .then(response => response.json())
+      .then(data => setData(data[0].forestTrees))
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   const renderTabContent = () => {

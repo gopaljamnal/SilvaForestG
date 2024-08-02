@@ -15,10 +15,10 @@ def read_json():
         data = json.loads(f.read())
         return jsonify(data)
 
-#
-# @app.route('/')
-# def hello_world():  # put application's code here
-#     return 'Hello World!'
+
+@app.route('/')
+def hello_world():  # put application's code here
+    return 'Hello World!'
 
 @app.route('/energy')
 def energy_json():
@@ -31,7 +31,6 @@ def energy_json():
 def sankey_csv():
     with open('./backend/data/test_sankey.csv', mode='r') as f:
         data =  csv.reader(f.read())
-
         return jsonify(data)
 
 
