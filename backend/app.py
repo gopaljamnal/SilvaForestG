@@ -2,14 +2,15 @@ import csv
 import json
 import os.path
 from flask import Flask, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
 
 # reading data from old application generated json
 @app.route('/readjson', methods=['GET'])
+@cross_origin()
 def read_json():
     with open('./backend/rf_json_trees.json', mode='r') as f:
         data = json.loads(f.read())
