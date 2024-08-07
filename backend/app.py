@@ -6,7 +6,7 @@ from flask_cors import CORS, cross_origin
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True)
+CORS(app)
 
 # reading data from old application generated json
 @app.route('/readjson', methods=['GET'])

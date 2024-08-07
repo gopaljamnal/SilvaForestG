@@ -1,12 +1,15 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import IciclePlot from './IciclePlot';
 import BarChart from './BarChart';
 import LineChart from './LineChart';
-import './index.css'; // Ensure CSS for layout
+import './index.css';
+// import app from "react-scripts/template-typescript/src/App"; // Ensure CSS for layout
 
 const App = () => {
+  // const cors = require('cors')
+  // app.use(cors())
   const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState('icicle');
   // const [plots, setPlots] = useState([]);
@@ -22,12 +25,12 @@ const App = () => {
   //     });
   // }, []);
 
-    useEffect(() => {
-    fetch('http://127.0.0.1:5000/readjson')
-      .then(response => response.json())
-      .then(data => setData(data[0].forestTrees))
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+      useEffect(() => {
+        fetch('http://127.0.0.1:5000/readjson')
+          .then(response => response.json())
+          .then(data => setData(data[0].forestTrees))
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
 
   const renderTabContent = () => {
     switch (activeTab) {
